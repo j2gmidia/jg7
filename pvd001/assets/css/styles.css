@@ -1,0 +1,274 @@
+:root {
+    --botao-comprar: red;
+    --sombra-do-video: #ffffff85;
+    --cor-text-atencao: #f00;
+
+    --background-secao-video: #001640;
+    --background-secao-1: #FFF;
+    --background-secao-2: #000;
+    --background-secao-3: #FFF;
+    --background-secao-4: #000;
+    --background-secao-5: #FFF;
+}
+
+
+
+/* outros estilos */
+#topbar {
+    position: relative;
+    padding: 3vh 10vw 3vh 10vw;
+    background-color: #F6F7FD;
+}
+#video {
+    position: relative;
+    padding: 5vh 20vw 5vh 20vw;
+    background-color: var(--background-secao-video);
+}
+#secao-1 {
+    position: relative;
+    padding: 3vh 20vw 3vh 20vw;
+    background-color: var(--background-secao-1);
+}
+#secao-2 {
+    position: relative;
+    padding: 3vh 20vw 3vh 20vw;
+    background-color: var(--background-secao-2);
+}
+#secao-3 {
+    position: relative;
+    padding: 3vh 20vw 5vh 20vw;
+    background-color: var(--background-secao-3);
+}
+#secao-4 {
+    position: relative;
+    padding: 3vh 20vw 3vh 20vw;
+    background-color: var(--background-secao-4);
+}
+#secao-5 {
+    position: relative;
+    padding: 3vh 20vw 3vh 20vw;
+    background-color: var(--background-secao-5);
+}
+
+.atention {
+    color: var(--cor-text-atencao);
+}
+.pulsing {
+    animation-name: pulsing;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite
+}
+.delay {
+    display: none;
+}
+.topbar-heading-element h3 {
+    font-size: .99vw;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #000000;
+    line-height: 1.1;
+    font-weight: 400
+}
+.video-container {
+    border: 1px solid #000000;
+    box-shadow: 0 0 6px 3px var(--sombra-do-video);
+    border-radius: 0
+}
+video.smartplayer-video {
+    border-radius: -4px !important
+}
+.coloque-fones-element h3 {
+    font-size: .99vw;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #ffffff;
+    line-height: 1.1;
+    font-weight: 400
+}
+a.btn-compra-element {
+    background-color: var(--botao-comprar);
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px 16px 32px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 5vh auto 2vh auto;
+    font-size: 1.49vw;
+    box-sizing: border-box;
+    max-width: 100%
+}
+.image-element img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: NaNvh;
+    padding-top: NaNvh;
+    max-width: 100%
+}
+.headline-section-element h1 {
+    font-size: 2.31vw;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #ffffff;
+    line-height: 1.1;
+    font-weight: 600
+}
+a.btn-compra-big-element {
+    background-color: var(--botao-comprar);
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px 16px 32px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 1vh auto 3vh auto;
+    font-size: 1.32vw;
+    box-sizing: border-box;
+    max-width: 100%
+}
+.ejaculacao-precoce-element h3 {
+    font-size: 1.98vw;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #000000;
+    line-height: 1.1;
+    font-weight: 600
+}
+
+
+
+@keyframes pulsing {
+    0% {
+        box-shadow: 0 0 0 0 var(--botao-comprar);
+    }
+    80% {
+        box-shadow: 0 0 0 12px #00ff1700
+    }
+}
+
+@media (max-width:600px) {
+    #topbar {
+        padding: 1.5vh 2.25vw 1.5vh 2.25vw
+    }
+
+    #video {
+        padding: 30px 2.25vw .75vh 2.25vw
+    }
+    #secao-1 {
+        padding: 1.5vh 1.5vw 1.5vh 1.5vw
+    }
+    #secao-2 {
+        padding: 1.5vh 1.5vw 1.5vh 1.5vw
+    }
+    #secao-3 {
+        padding: 1.5vh 1.5vw 3.75vh 1.5vw
+    }
+    #secao-4 {
+        padding: 1.5vh 1.5vw 1.5vh 2.25vw
+    }
+    #secao-5 {
+        padding: 1.5vh 1.5vw 1.5vh 1.5vw
+    }
+    a.btn-compra-element {
+        font-size: 4.50vw
+    }
+    .image-element img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto
+    }
+    a.btn-compra-big-element {
+        font-size: 4.00vw
+    }
+    .flex-large,
+    .flex-small {
+        margin-right: 0 !important;
+        margin-bottom: 16px
+    }
+}
+@media (max-width:640px) {
+    html {
+        overflow-x: hidden
+    }
+    .topbar-heading-element h3 {
+        font-size: 2.25vw;
+        text-align: center
+    }
+    .coloque-fones-element h3 {
+        font-size: 2.25vw;
+        text-align: center
+    }
+    .headline-section-element h1 {
+        font-size: 5.60vw;
+        text-align: center
+    }
+    .ejaculacao-precoce-element h3 {
+        font-size: 4.50vw;
+        text-align: center
+    }
+}
+@media (max-width:1200px) {
+    #topbar {
+        padding: 1.5vh 5vw 1.5vh 5vw
+    }
+
+    #secao-1 {
+        padding: 1.5vh 10vw 1.5vh 10vw
+    }
+    #secao-3 {
+        padding: 1.5vh 10vw 2.5vh 10vw
+    }
+    #secao-5 {
+        padding: 1.5vh 10vw 1.5vh 10vw
+    }
+    .topbar-heading-element h3 {
+        font-size: 1.65vw;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+    #video {
+        padding: 60px 10vw 2.5vh 10vw
+    }
+    #secao-2 {
+        padding: 1.5vh 10vw 1.5vh 10vw
+    }
+    #secao-4 {
+        padding: 1.5vh 10vw 1.5vh 10vw
+    }
+    .coloque-fones-element h3 {
+        font-size: 1.65vw;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh
+    }
+    a.btn-compra-element {
+        font-size: 3.38vw;
+        margin: 3.3000000000000003vh auto 1.5vh auto
+    }
+    .image-element img {
+        max-width: 90%
+    }
+    .headline-section-element h1 {
+        font-size: 3.85vw;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh
+    }
+    a.btn-compra-big-element {
+        font-size: 3.00vw;
+        margin: .66vh auto 2.25vh auto
+    }
+    .ejaculacao-precoce-element h3 {
+        font-size: 3.30vw;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh
+    }
+}
