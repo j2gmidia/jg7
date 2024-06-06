@@ -4,11 +4,12 @@
     --cor-text-atencao: #f00;
 
     --background-secao-video: #001640;
-    --background-secao-1: #FFF;
-    --background-secao-2: #000;
-    --background-secao-3: #FFF;
-    --background-secao-4: #000;
-    --background-secao-5: #FFF;
+    --background-secao-1: #001640;
+    --background-secao-2: #001640;
+    --background-secao-3: #001640;
+    --background-secao-4: #001640;
+    --background-secao-5: #001640;
+    --background-secao-6: rgb(0, 0, 0);
 }
 
 
@@ -48,6 +49,12 @@
     position: relative;
     padding: 3vh 20vw 3vh 20vw;
     background-color: var(--background-secao-5);
+}
+
+#secao-6 {
+    position: relative;
+    padding: 3vh 20vw 3vh 20vw;
+    background-color: var(--background-secao-6);
 }
 
 .atention {
@@ -145,6 +152,16 @@ a.btn-compra-big-element {
     font-weight: 600
 }
 
+.politicas {
+    font-size: .80vw;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #767676;
+    line-height: 1.1;
+    font-weight: 300
+}
+
 
 
 @keyframes pulsing {
@@ -177,6 +194,10 @@ a.btn-compra-big-element {
         padding: 1.5vh 1.5vw 1.5vh 2.25vw
     }
     #secao-5 {
+        padding: 1.5vh 1.5vw 1.5vh 1.5vw
+        
+    }
+        #secao-6 {
         padding: 1.5vh 1.5vw 1.5vh 1.5vw
     }
     a.btn-compra-element {
@@ -229,6 +250,9 @@ a.btn-compra-big-element {
         padding: 1.5vh 10vw 2.5vh 10vw
     }
     #secao-5 {
+        padding: 1.5vh 10vw 1.5vh 10vw
+    }
+        #secao-6 {
         padding: 1.5vh 10vw 1.5vh 10vw
     }
     .topbar-heading-element h3 {
