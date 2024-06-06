@@ -38,8 +38,57 @@
                     </h3>
                 </div>
             </div>
-            <div class="btn-compra delay">
-                <a href="https://jg7.mycartpanda.com/checkout/134998255:1" target="_blank" class="btn btn-compra-element pulsing">
+
+        <style>.esconder { display: none }</style>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+/* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
+var SECONDS_TO_DISPLAY = 1935;
+var CLASS_TO_DISPLAY = ".esconder";
+/* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
+var attempts = 0;
+var elsHiddenList = [];
+var elsDisplayed = false;
+var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+var alreadyDisplayedKey = "alreadyElsDisplayed" + SECONDS_TO_DISPLAY;
+var alreadyElsDisplayed = null;
+try {
+    alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
+} catch(e) {
+    console.warn('Failed to read data from localStorage: ', e);
+}
+setTimeout(function () { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
+var showHiddenElements = function () {
+elsDisplayed = true;
+elsHiddenList.forEach((e) => e.style.display = "block");
+try {
+  localStorage.setItem(alreadyDisplayedKey, true);
+} catch (e) {
+  console.warn('Failed to save data in localStorage: ', e);
+}
+}
+var startWatchVideoProgress = function () {
+if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+if (attempts >= 10) return;
+attempts += 1;
+return setTimeout(function () { startWatchVideoProgress() }, 1000);
+}
+smartplayer.instances[0].on('timeupdate', () => {
+if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+if (smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
+showHiddenElements();
+})
+}
+if (alreadyElsDisplayed === 'true') {
+setTimeout(function () { showHiddenElements(); }, 100);
+} else {
+startWatchVideoProgress()
+}
+});
+</script>
+            <div class="btn-compra esconder">
+                <a href="https://jg7.mycartpanda.com/checkout/134998255:1/?src=youtube" target="_blank" class="btn btn-compra-element pulsing">
                     I want to Eliminate Diabetes Now 
                 </a>
             </div>
@@ -56,4 +105,5 @@
            <br><p> Copyright © 2024 </p>
         </div>
     </section>
+   </footer>
 </html>
