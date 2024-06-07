@@ -198,7 +198,7 @@ a.btn-compra-big-element {
         
     }
         #secao-6 {
-        padding: 1.5vh 1.5vw 1.5vh 1.5vw
+        padding: 1.5vh 1.5vw 10vh 1.5vw
     }
     a.btn-compra-element {
         font-size: 4.50vw
@@ -253,7 +253,7 @@ a.btn-compra-big-element {
         padding: 1.5vh 10vw 1.5vh 10vw
     }
         #secao-6 {
-        padding: 1.5vh 10vw 1.5vh 10vw
+        padding: 1.5vh 10vw 10vh 10vw
     }
     .topbar-heading-element h3 {
         font-size: 3vw;
